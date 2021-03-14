@@ -71,7 +71,7 @@ public class InputController : MonoBehaviour
 
                 MyCharacter.transform.LookAt(RotHolder.transform, new Vector3(0, 1, 0));
 
-                if (GetTileAt(WalkCheck.transform) && GetTileAt(RotHolder.transform))
+                if (GetTileAt(RotHolder.transform)) //GetTileAt(WalkCheck.transform) && 
                 {
                     float heightdiff = GetTileTop(GetTileAt(RotHolder.transform)) - GetTileTop(LastKnownTile);
                     if (heightdiff <= 2.2f && heightdiff >= -5.2f)
