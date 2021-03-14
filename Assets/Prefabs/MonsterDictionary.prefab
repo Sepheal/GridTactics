@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4570777134436699717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4808477965152578762}
+  - component: {fileID: 6187458409195129275}
+  m_Layer: 0
+  m_Name: MonsterDictionary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4808477965152578762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570777134436699717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.381431, y: 2.4859731, z: 14.538596}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6187458409195129275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4570777134436699717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f213ee51bb2fa4a98053165ccb9406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MonDictionaryPrefabs:
+  - {fileID: 3677277266853654427, guid: 2ceb33f9a3d3a4a418277f526ec8c55e, type: 3}
+  - {fileID: 3991260469673269575, guid: 338c4593306684a44b39d8cbb5756e52, type: 3}
+  - {fileID: 0}
+  - {fileID: 8891585112564803071, guid: 7a0d92450f3f11d4fbc2d0d2cf30aacb, type: 3}
+  - {fileID: 5678083196196559860, guid: b70fa5d1a64806d4e8b7600388483960, type: 3}
+  - {fileID: 801791466655942161, guid: 13a9f9e212727744abd2453ced153f17, type: 3}
+  - {fileID: 9043372740616889128, guid: 580369a26a5fb50468bcdfdd5e6500b0, type: 3}
+  MonsterSpritesRight:
+  - {fileID: 21300000, guid: cf425c7d96f6343438de745ea232dca8, type: 3}
+  - {fileID: 21300000, guid: ea9cd8bec615e2a4ca07b598d7ec6589, type: 3}
+  - {fileID: 21300000, guid: 1aea7aeac0e9e0a499fe27508ba30035, type: 3}
+  - {fileID: 21300000, guid: 66642fb02e8f36145a60c31877462bb2, type: 3}
+  - {fileID: 21300000, guid: 42f6466cd000e8548a13e6765bfaff94, type: 3}
+  - {fileID: 21300000, guid: 34f7798df9015724d99787c3db10745d, type: 3}
+  - {fileID: 21300000, guid: 542197d2d9e81c14f8098f5e7a52bca5, type: 3}
+  MonsterSpritesLeft:
+  - {fileID: 21300000, guid: 4f2ffeaf7c0df524097c3f364a21b29f, type: 3}
+  - {fileID: 21300000, guid: ab302f4322bd5ef45b614fb69ce22029, type: 3}
+  - {fileID: 0}
+  - {fileID: 21300000, guid: 39533d63981a8654aba8f13275152d4e, type: 3}
+  - {fileID: 21300000, guid: 07e22252270562c4990f8c9cfb065fde, type: 3}
+  - {fileID: 21300000, guid: 470e1db129453b446a1c01282bdc4e3b, type: 3}
+  - {fileID: 21300000, guid: b7c468ae5f2ec2843bebdd03a0f29c7b, type: 3}
+  AttackBaseStat: 02000000010000000500000002000000010000000100000001000000
+  DefenceBaseStat: 01000000020000000300000001000000020000000100000001000000
+  SpeedBaseStat: 02000000010000000200000002000000010000000300000003000000
+  HPBaseStat: 64000000780000006400000064000000780000005000000050000000

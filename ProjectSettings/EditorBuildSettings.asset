@@ -4,5 +4,50 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TitleScreens/TitleScreen.unity
+    guid: 1b9c25e111969a642a85caf737e890b7
+  - enabled: 1
+    path: Assets/Scenes/TitleScreens/SelectHeroScreen.unity
+    guid: 52cefc793c21f724cb5a366b63b8df78
+  - enabled: 1
+    path: Assets/Scenes/TitleScreens/GameOverScreen.unity
+    guid: f9700620d4048834c8cda10a2ae65b0e
+  - enabled: 1
+    path: Assets/Scenes/TitleScreens/NewUnitScreen.unity
+    guid: 431eb50f67ee92a45b837eee9673c8ec
+  - enabled: 1
+    path: Assets/Scenes/Zone1/DreamWorld.unity
+    guid: f0d34ab635cd0a44b8711b0aba672925
+  - enabled: 1
+    path: Assets/Scenes/Zone1/Battle0.unity
+    guid: 52904f601ab9a0345aacc0df2680e22f
+  - enabled: 1
+    path: Assets/Scenes/Zone1/HomeScene.unity
+    guid: e7b1fc2138e741e439203731e812a96b
+  - enabled: 1
+    path: Assets/Scenes/Zone1/ForestPath.unity
+    guid: a1e60ddad0a4b854ba9583230c801544
+  - enabled: 1
+    path: Assets/Scenes/Zone1/Battle1.unity
+    guid: 02d3eb0fde70fcc4ba43c42967c73f2b
+  - enabled: 1
+    path: Assets/Scenes/Zone1/Battle2.unity
+    guid: 715d98dcade2b5d4cb25ebb514f42a0e
+  - enabled: 1
+    path: Assets/Scenes/Zone1/ForestPath2.unity
+    guid: e31c30a4ccc55f54dae657732ee149f5
+  - enabled: 1
+    path: Assets/Scenes/Zone1/Battle3.unity
+    guid: 316070d0713f903419a16cfdb477fd55
+  - enabled: 1
+    path: Assets/Scenes/Zone1/Battle4.unity
+    guid: 70d92e0e019355e4eba28d47c1fb47cd
+  - enabled: 1
+    path: Assets/Scenes/Zone1/Overworld.unity
+    guid: 2e526195d82aed045ac17447d812ee26
+  - enabled: 1
+    path: Assets/Scenes/TestBattle.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
