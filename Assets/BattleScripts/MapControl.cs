@@ -20,14 +20,21 @@ public class MapControl : MonoBehaviour
     public List<Tile> Map;
     public GameObject BaseTilePrefab;
     public Sprite SelectIconPrefab;
+    public GameObject AttDictPrefab;
     AttackDictionary AD;
 
     static UnityEngine.Vector2 Up = new UnityEngine.Vector2(0, 1), Down = new UnityEngine.Vector2(0, -1), Left = new UnityEngine.Vector2(-1, 0), Right = new UnityEngine.Vector2(1, 0);
     static UnityEngine.Vector3 Null = new UnityEngine.Vector3();
+
+    private void Awake()
+    {
+        GameObject AttDictObject = Instantiate(AttDictPrefab);
+        AD = AttDictObject.GetComponent<AttackDictionary>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        AD = FindObjectOfType<AttackDictionary>();
         Map = new List<Tile>();
 
         int count = 1;
@@ -262,22 +269,13 @@ public class MapControl : MonoBehaviour
         else FindObjectOfType<PlayerStatUIControl>().HideStats(3);
     }
 
-    int CalculateDamage(int Id ,float Attack, float Defence, Element AttackElement, Element TargetElement)
+    public int CalculateDamage(int Id ,float Attack, float Defence, Element AttackElement, Element TargetElement)
     {
         float damage = (Attack - Defence)/10;
         if (damage <= 0f) damage = 0f;
         damage++;
         //Minimun damage is 1 * damage below
         float ElementApplify = GetElementInteraction(AttackElement, TargetElement);
-        //switch (Id)
-        //{
-        //    case 1: damage *= AD.AttackList[0].BaseDamage; break;
-        //    case 2: damage *= AD.AttackList[1].BaseDamage; break;
-        //    case 3: damage *= AD.AttackList[2].BaseDamage; break;
-        //    case 4: damage *= AD.AttackList[3].BaseDamage; break;
-        //    default:
-        //        break;
-        //}
         damage *= AD.AttackList[Id - 1].BaseDamage;
         damage *= ElementApplify;
         return (int)damage;
@@ -372,15 +370,17 @@ public class MapControl : MonoBehaviour
 
     public List<Tile> GetAttackPatternTiles(int Id, Tile StartTile, Tile Origin)
     {
+        if (Id == 0) return new List<Tile>();
         UnityEngine.Vector2 InitialDirection = (StartTile.Position - Origin.Position);
         List<Tile> PatternTiles = new List<Tile>();
         List<List<Directions>> ListOfPathDirections = new List<List<Directions>>();
         List<Directions> TempList = new List<Directions>();
-        if (Id == 1 || Id == 5) //single target in front
+        int AoeId = AD.AttackList[Id - 1].AOEID;
+        if (AoeId == 1) //single target in front
         {
             PatternTiles.Add(StartTile);
         }
-        else if (Id == 2) // Wide attack
+        else if (AoeId == 2) // Wide attack
         {
             PatternTiles.Add(StartTile);
             TempList = new List<Directions> { Directions.Left };
@@ -388,7 +388,7 @@ public class MapControl : MonoBehaviour
             TempList = new List<Directions> { Directions.Right };
             ListOfPathDirections.Add(TempList);
         }
-        else if (Id == 3) // diagonal attack
+        else if (AoeId == 3) // diagonal attack
         {
             PatternTiles.Add(StartTile);
             TempList = new List<Directions> { Directions.Left, Directions.Right };
@@ -400,10 +400,24 @@ public class MapControl : MonoBehaviour
             TempList = new List<Directions> { Directions.Right, Directions.Left };
             ListOfPathDirections.Add(TempList);
         }
-        else if (Id == 4) // forward attack 2
+        else if (AoeId == 4) // forward attack 2
         {
             PatternTiles.Add(StartTile);
             TempList = new List<Directions> { Directions.Straight };
+            ListOfPathDirections.Add(TempList);
+        }
+        else if (AoeId == 5) // forward attack 2x3 block
+        {
+            PatternTiles.Add(StartTile);
+            TempList = new List<Directions> { Directions.Straight };
+            ListOfPathDirections.Add(TempList);
+            TempList = new List<Directions> { Directions.Left };
+            ListOfPathDirections.Add(TempList);
+            TempList = new List<Directions> { Directions.Left, Directions.Right };
+            ListOfPathDirections.Add(TempList);
+            TempList = new List<Directions> { Directions.Right };
+            ListOfPathDirections.Add(TempList);
+            TempList = new List<Directions> { Directions.Right, Directions.Left };
             ListOfPathDirections.Add(TempList);
         }
         foreach (List<Directions> Path in ListOfPathDirections)
@@ -419,7 +433,7 @@ public class MapControl : MonoBehaviour
                 if (NextTile)
                 {
                     bool CanAdd = true;
-                    if (Id == 3 && DirCount % 2 == 1) CanAdd = false; //If Odd, don't add
+                    if (AoeId == 3 && DirCount % 2 == 1) CanAdd = false; //If Odd, don't add
                     if (PatternTiles.Exists(x => x == NextTile)) CanAdd = false; // no duplicates
                     if (CanAdd) PatternTiles.Add(NextTile);
                     CurrentTile = NextTile;

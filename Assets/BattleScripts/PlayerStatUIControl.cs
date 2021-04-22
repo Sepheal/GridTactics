@@ -59,7 +59,8 @@ public class PlayerStatUIControl : MonoBehaviour
             StatUIParent2.SetActive(true);
         }
         object[] Stats = Unit.GetStats();
-        string s = "At: " + Stats[3];
+        string s = "Lv: " + Stats[7]; 
+        s += "\nAt: " + Stats[3];
         s += "\nDf: " + Stats[4];
         s += "\nMv: " + Stats[5];
         
@@ -181,7 +182,9 @@ public class PlayerStatUIControl : MonoBehaviour
 
         HPF.GetComponent<RectTransform>().sizeDelta = new Vector2(PercentLeft * BarSize, 1);
         HPD.GetComponent<RectTransform>().sizeDelta = new Vector2(Diff * BarSize, 1);
-        PImage.sprite = MonsterSpritesLeft[unit.MonsterId];
+
+        if (unit.MonsterId != 2) PImage.sprite = MonsterSpritesLeft[unit.MonsterId];
+        else PImage.sprite = FindObjectOfType<PersistantStats>().HeroImage;
 
         float XPos = HPF.GetComponent<RectTransform>().localPosition.x - HPF.GetComponent<RectTransform>().sizeDelta.x;
         HPD.GetComponent<RectTransform>().localPosition = new Vector3(XPos, 0, 0);

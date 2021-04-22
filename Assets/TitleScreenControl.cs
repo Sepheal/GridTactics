@@ -20,6 +20,7 @@ public class TitleScreenControl : MonoBehaviour
     public void NewGame()
     {
         //SceneManager.LoadScene("DreamWorld");
+        GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("SelectHeroScreen");
     }
 }

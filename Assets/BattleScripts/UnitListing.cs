@@ -9,13 +9,10 @@ public class UnitListing : MonoBehaviour
     public int MyLevel = 1;
     public int Exp = 0;
     public Tile StartingTile;
-    //public Vector2 Pos;
-    //public Stats UnitStats;
 
     public string MyName;
-    //public int MovementPoints, AttackRange, MaxHealth, AttackStat, DefenceStat;
     public Element MyElement;
-    public int[] AttackList;
+    public int PassiveLevel = 1;
 
     public bool Placed = false;
     public UnitMovement MyBody;

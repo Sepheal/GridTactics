@@ -19,6 +19,8 @@ public class UnitSelection : MonoBehaviour
 
     bool ConfirmScreen = false;
 
+    public AudioClip ConfirmAudio, ConfirmAudio2, ChangeAudio, CancelAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -67,8 +69,14 @@ public class UnitSelection : MonoBehaviour
                     //Select button
                     if (Input.GetButtonDown("Select"))
                     {
-                        if (OptionList[NumListed].name == "Cancel") Cancel();
-                        else ChosenUnit();
+                        if (OptionList[NumListed].name == "Cancel")
+                        {
+                            Cancel();
+                        }
+                        else
+                        {
+                            ChosenUnit();
+                        }
                     }
                     //Cancel button
                     else if (Input.GetButtonDown("Cancel"))
@@ -81,8 +89,14 @@ public class UnitSelection : MonoBehaviour
                     //Select button
                     if (Input.GetButtonDown("Select"))
                     {
-                        if (NumListedConfirm == 0) Confirm(true);
-                        else Confirm(false);
+                        if (NumListedConfirm == 0)
+                        {
+                            Confirm(true);
+                        }
+                        else
+                        {
+                            Confirm(false);
+                        }
                         Active = false;
                     }
                     //Cancel button
@@ -103,6 +117,7 @@ public class UnitSelection : MonoBehaviour
         switch (Answer)
         {
             case true:
+                GetComponent<AudioSource>().PlayOneShot(ConfirmAudio2);
                 FindObjectOfType<MegaMenuControl>().StartCombat();
                 break;
             case false:
@@ -115,6 +130,7 @@ public class UnitSelection : MonoBehaviour
 
     public void ChosenUnit()
     {
+        GetComponent<AudioSource>().PlayOneShot(ConfirmAudio);
         OptionList[NumListed].GetComponent<OnHighlightUI>().MyAssignedUnit.StartingTile = TileSelected;
         FindObjectOfType<GameManager>().SpawnUnit(OptionList[NumListed].GetComponent<OnHighlightUI>().MyAssignedUnit);
         if (OptionList.Count == 2) //final unit placed
@@ -137,6 +153,7 @@ public class UnitSelection : MonoBehaviour
 
     public void Cancel()
     {
+        GetComponent<AudioSource>().PlayOneShot(CancelAudio);
         foreach (Transform item in transform)
         {
             item.gameObject.SetActive(false);
@@ -152,6 +169,7 @@ public class UnitSelection : MonoBehaviour
             item.transform.Find("H").gameObject.SetActive(false);
         }
         OptionList[NumListed].transform.Find("H").gameObject.SetActive(true);
+        GetComponent<AudioSource>().PlayOneShot(ChangeAudio);
     }
 
     void SetConfirmHighlight()
@@ -169,6 +187,7 @@ public class UnitSelection : MonoBehaviour
             default:
                 break;
         }
+        //GetComponent<AudioSource>().PlayOneShot(ChangeAudio);
     }
 
     public void SetHighlightRemote(int i) //Is used don't delete!

@@ -19,10 +19,11 @@ public class LevelLoader : MonoBehaviour
     public IEnumerator LoadBattle(string SceneName)
     {
         StopActions();
+        GetComponent<AudioSource>().Play();
         GetComponent<Animator>().SetTrigger("Start");
         FindObjectOfType<BattleEffect>().StartAnim();
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
 
         SceneManager.LoadScene(SceneName);
     }

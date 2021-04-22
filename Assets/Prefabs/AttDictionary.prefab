@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6539698468080192467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6340374873273142902}
+  - component: {fileID: 1674435331667268535}
+  m_Layer: 0
+  m_Name: AttDictionary
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6340374873273142902
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539698468080192467}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.062247, y: 8.579917, z: 4.8511467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1674435331667268535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6539698468080192467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84099c1ac134c9d458b7d99389afd620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttNames:
+  - Tackle
+  - Wave Slap
+  - Twin Poke
+  - String Shot
+  - Shell Stab
+  - Axe Slice
+  - String Spray
+  - Spider Slam
+  BaseDamage: 1e0000000f0000000f00000014000000190000001e0000001400000019000000
+  AreaOfEffectId: 0100000002000000030000000400000001000000010000000500000002000000
+  AttSound:
+  - {fileID: 8300000, guid: 3a32fb6284f476d4dacd3a98ec025e14, type: 3}
+  - {fileID: 8300000, guid: b8724565b99db4842befc8ce6ffa80a0, type: 3}
+  - {fileID: 8300000, guid: bcdee21790fcef147b27aa5c033a59b4, type: 3}
+  - {fileID: 8300000, guid: bd90ff8c85e33a24ebb39307a58aec68, type: 3}
+  - {fileID: 8300000, guid: 83d7e70ab26742c45a4063062651f692, type: 3}
+  - {fileID: 8300000, guid: 6a9e6908d78985f4392c795fa5aad92e, type: 3}
+  - {fileID: 8300000, guid: bd90ff8c85e33a24ebb39307a58aec68, type: 3}
+  - {fileID: 8300000, guid: b8724565b99db4842befc8ce6ffa80a0, type: 3}

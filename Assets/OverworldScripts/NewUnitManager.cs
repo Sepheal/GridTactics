@@ -13,17 +13,23 @@ public class NewUnitManager : MonoBehaviour
     public Text SpeciesText, ElementText, SAttacksText, FAttacksText;
 
     PersistantStats PS;
+    public GameObject AttDictPrefab;
     AttackDictionary AD;
 
     UnitListing NewUnit;
     GameObject UnitBody;
+
+    private void Awake()
+    {
+        GameObject AttDictObject = Instantiate(AttDictPrefab);
+        AD = AttDictObject.GetComponent<AttackDictionary>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
         PS = FindObjectOfType<PersistantStats>();
-        AD = FindObjectOfType<AttackDictionary>();
 
         NewUnit = UnitListings[PS.EncounterIdMessage];
         UnitBody = Instantiate(MD.MonDictionaryPrefabs[NewUnit.MonsterId]);
@@ -33,10 +39,18 @@ public class NewUnitManager : MonoBehaviour
         SpeciesText.text = "Species:\n" + NewUnit.MyName;
         ElementText.text = "Element:\n" + NewUnit.MyElement.ToString();
         string AttackString = "Starting Attacks:";
-        foreach (int Id in NewUnit.AttackList)
+        int[] AttackList = AD.GetAttacks(NewUnit.MonsterId, NewUnit.MyLevel);
+        for (int i = 0; i < AttackList.Length; i++)
         {
-            AttackString += "\n-" + AD.AttackList[Id - 1].Name;
+            if (AttackList[i] != 0)
+            {
+                AttackString += "\n-" + AD.AttackList[AttackList[i] - 1].Name;
+            }
         }
+        //foreach (int Id in NewUnit.AttackList)
+        //{
+        //    AttackString += "\n-" + AD.AttackList[Id - 1].Name;
+        //}
         SAttacksText.text = AttackString;
 
     }

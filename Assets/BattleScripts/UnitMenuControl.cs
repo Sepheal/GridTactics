@@ -12,6 +12,8 @@ public class UnitMenuControl : MonoBehaviour
     float CooldownStart;  readonly float FrameCooldown = 0.2f;
     PlayerMovement P;
 
+    public AudioClip ConfirmAudio, ConfirmAudio2, ChangeAudio, CancelAudio;
+
     // Update is called once per frame
     void Update()
     {
@@ -40,18 +42,21 @@ public class UnitMenuControl : MonoBehaviour
                 //Select button
                 if (Input.GetButtonDown("Select") )//|| Input.GetMouseButtonDown(0))
                 {
-                    if (OptionList[NumListed].name == "Wait") P.Wait();
-                    else if (OptionList[NumListed].name == "Cancel") P.Reset();
-                    else if (OptionList[NumListed].name == "Attack1") P.ShowAttack(1);
-                    else if (OptionList[NumListed].name == "Attack2") P.ShowAttack(2);
-                    else if (OptionList[NumListed].name == "Attack3") P.ShowAttack(3);
-                    else if (OptionList[NumListed].name == "Attack4") P.ShowAttack(4);
-                    else if (OptionList[NumListed].name == "Attack5") P.ShowAttack(5);
+                    if (OptionList[NumListed].name == "Wait") Wait(); //P.Wait();
+                    else if (OptionList[NumListed].name == "Cancel") Reset(); // P.Reset();
+                    else if (OptionList[NumListed].name == "Attack1") ShowAttack(1); //  P.ShowAttack(1);
+                    else if (OptionList[NumListed].name == "Attack2") ShowAttack(2); // P.ShowAttack(2);
+                    else if (OptionList[NumListed].name == "Attack3") ShowAttack(3); // P.ShowAttack(3);
+                    else if (OptionList[NumListed].name == "Attack4") ShowAttack(4); // P.ShowAttack(4);
+                    else if (OptionList[NumListed].name == "Attack5") ShowAttack(5); // P.ShowAttack(5);
+                    else if (OptionList[NumListed].name == "Attack6") ShowAttack(6); // P.ShowAttack(5);
+                    else if (OptionList[NumListed].name == "Attack7") ShowAttack(7); // P.ShowAttack(5);
+                    else if (OptionList[NumListed].name == "Attack8") ShowAttack(8); // P.ShowAttack(5);
                     Active = false;
                 }
                 else if (Input.GetButtonDown("Cancel"))
                 {
-                    P.Reset();
+                    Reset(); // P.Reset();
                 }
             }
         }
@@ -65,28 +70,31 @@ public class UnitMenuControl : MonoBehaviour
             item.transform.Find("H").gameObject.SetActive(false);
         }
         OptionList[NumListed].transform.Find("H").gameObject.SetActive(true);
+        GetComponent<AudioSource>().PlayOneShot(ChangeAudio);
     }
 
     public void SetHighlightRemote(int i) //Is used don't delete!
     {
         NumListed = i;
         SetHighlight();
-        print(i);
     }
 
     public void ShowAttack(int id)
     {
         P.ShowAttack(id);
+        GetComponent<AudioSource>().PlayOneShot(ConfirmAudio);
     }
 
     public void Wait()
     {
         P.Wait();
+        GetComponent<AudioSource>().PlayOneShot(ConfirmAudio);
     }
 
     public void Reset()
     {
         P.Reset();
+        GetComponent<AudioSource>().PlayOneShot(CancelAudio);
     }
 
     public void Activate(PlayerMovement p)
@@ -101,7 +109,6 @@ public class UnitMenuControl : MonoBehaviour
                     if (AttackId == item.GetComponent<OnHighlightUI>().AttackOption)
                     {
                         item.gameObject.SetActive(true);
-                        //item.GetComponent<Button>().
                     }
                 }
             }

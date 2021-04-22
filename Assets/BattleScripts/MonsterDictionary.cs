@@ -13,4 +13,8 @@ public class MonsterDictionary : MonoBehaviour
     public int[] DefenceBaseStat;
     public int[] SpeedBaseStat;
     public int[] HPBaseStat;
+
+    public AudioClip[] TakeDamageSound;
+    public AudioClip[] DeathSound;
+    public AudioClip[] WalkSound;
 }

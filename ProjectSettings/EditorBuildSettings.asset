@@ -45,6 +45,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Zone1/Battle4.unity
     guid: 70d92e0e019355e4eba28d47c1fb47cd
   - enabled: 1
+    path: Assets/Scenes/Zone1/Battle5.unity
+    guid: a8f6a930ce7d41e4c9116fbd5dc85f5b
+  - enabled: 1
+    path: Assets/Scenes/Zone1/Battle6.unity
+    guid: 55cb7011307645841a74430ec5478498
+  - enabled: 1
     path: Assets/Scenes/Zone1/Overworld.unity
     guid: 2e526195d82aed045ac17447d812ee26
   - enabled: 1

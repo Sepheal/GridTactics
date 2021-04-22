@@ -74,14 +74,17 @@ public class EXPDisplay : MonoBehaviour
             unitcounter++;
         }
 
-        Texto = "Lv. " + PS.PlayerLevel;
         PS.PlayerExp += 70;
         if (PS.PlayerExp >= 100)
         {
             PS.PlayerExp -= 100;
             PS.PlayerLevel++;
-            Texto += "  (Lvl up!)";
+            Texto = "Lv. " + PS.PlayerLevel + "  (Lvl up!)";
             UnitBoxs[0].transform.Find("Bar").Find("Image").Find("Anim").GetComponent<Image>().color = new Color(255, 255, 0);
+        }
+        else
+        {
+            Texto = "Lv. " + PS.PlayerLevel;
         }
 
         UnitBoxs[0].SetActive(true);

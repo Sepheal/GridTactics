@@ -48,3 +48,6 @@ MonoBehaviour:
   - {fileID: 381773159224585132, guid: 4060a7998236b914f951198d0465ab1a, type: 3}
   - {fileID: 2794623822170580084, guid: 70afca31c25afdf41a0e651eb480eda9, type: 3}
   - {fileID: 6686284943843998337, guid: 6d3491163038b6c4c8ff57925b622e0c, type: 3}
+  TakeDamageSound: {fileID: 8300000, guid: 78cf7246e94b2294cad3af281a0f90bf, type: 3}
+  DeathSound: {fileID: 8300000, guid: a75f675495aaa8e4f9d2552a0b292d66, type: 3}
+  WalkSound: {fileID: 8300000, guid: 61d385886e1acd7489ca274665ccbf27, type: 3}

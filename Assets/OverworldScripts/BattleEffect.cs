@@ -22,11 +22,12 @@ public class BattleEffect : MonoBehaviour
     {
         if (Active)
         {
-            if (Time.time - FrameStart >= FrameCooldown)
-            {
-                MyLens.intensity.value -= 5.0f;
-                FrameStart = Time.time;
-            }
+            //if (Time.time - FrameStart >= FrameCooldown)
+            //{
+            //    MyLens.intensity.value -= 5.0f;
+            //    FrameStart = Time.time;
+            //}
+            MyLens.intensity.value -= 5.0f * Time.deltaTime * 30f;
         }
     }
 

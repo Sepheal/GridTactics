@@ -55,17 +55,10 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.PostProcessing.Vignette
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    Unity.Timeline.Editor.dll:
-    - UnityEditor.Timeline.SequenceHierarchy
     Unity.Timeline.dll:
     - UnityEngine.Timeline.AnimationTrack
     - UnityEngine.Timeline.MarkerTrack
     - UnityEngine.Timeline.TimelineAsset
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -116,6 +109,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -262,6 +259,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -322,6 +323,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -410,6 +415,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 90
@@ -485,6 +494,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -553,6 +566,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -714,6 +731,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -882,6 +903,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 90
@@ -1048,6 +1073,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
@@ -1216,6 +1245,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 90
@@ -1383,6 +1416,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -1503,6 +1540,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -1630,6 +1671,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -1760,6 +1805,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
     - Class: 91
@@ -1832,11 +1881,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
+    - Class: 154
+      Script: {instanceID: 0}
+    - Class: 156
+      Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 218
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -1845,6 +1900,8 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 225
+      Script: {instanceID: 0}
+    - Class: 1953259897
       Script: {instanceID: 0}
     Assets/Scenes/Zone1/Overworld.unity:
     - Class: 1
@@ -1876,6 +1933,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 90
       Script: {instanceID: 0}
@@ -2048,7 +2109,7 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: a358463f3ede9452bc925b4bf7416753
+      Hash: 281b5ef8d91f2a8d78ebcb20e20f3447
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HeroSelectControl
@@ -2102,13 +2163,13 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: 58c23b9f621242e8072b35ff58520433
+      Hash: 03b920cce33f8b5f3051089e72f3239b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DialogueOverworld
   - hash:
       serializedVersion: 2
-      Hash: e49bb3d6eabaced376a39b1d04b4000f
+      Hash: 753beacd4f10df4006f3f5d124e9706a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnitMovement
@@ -2162,7 +2223,7 @@ ScriptsOnlyBuild:
     className: ScreenSpaceReflections
   - hash:
       serializedVersion: 2
-      Hash: c8997d5d622442fc7d17ac565475e2a3
+      Hash: be3c4f996dace26095d36c209fdf4401
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MapControl
@@ -2282,7 +2343,7 @@ ScriptsOnlyBuild:
     className: PersistantStats
   - hash:
       serializedVersion: 2
-      Hash: ceb334637697ffb4eb5181f1f8918418
+      Hash: 6607d144f17703401263d60d1097cc6f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -2354,13 +2415,13 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 49d53d997799a1148f2f9cafe90a7b71
+      Hash: 2a226e1fc3bab2e2b686cb06e0b30533
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnitSelection
   - hash:
       serializedVersion: 2
-      Hash: 35d74f51e3b41901d601e7ede9a63562
+      Hash: afeab88b557e41db50c25ed50c4d9332
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NewUnitManager
@@ -2420,7 +2481,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: e99f4eb6e37c9c06adc556d94e3cee54
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UnitMenuControl
@@ -2450,7 +2511,7 @@ ScriptsOnlyBuild:
     className: CameraControlOverworld
   - hash:
       serializedVersion: 2
-      Hash: c143b16aa5925f8c2358bdcccd977e14
+      Hash: 6d3ac20c8ad5b5cb7ff8ead55e8ad9ba
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DialogueInBattle
@@ -2468,7 +2529,7 @@ ScriptsOnlyBuild:
     className: ColorPalette
   - hash:
       serializedVersion: 2
-      Hash: 75d9cfe6e3e76b1036d71ffd180debe2
+      Hash: 7ff699ea1119c5f2e6fe59572c416e82
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HeroDictionary
@@ -2492,7 +2553,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 3244805fbde8de76a1528cd8db8c058e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AttackDictionary
@@ -2528,7 +2589,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 7efa7f02ee77345a8ab52e0b97200d88
+      Hash: 43116e8822413648165d45b9069d008e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerMovement
@@ -2618,7 +2679,7 @@ ScriptsOnlyBuild:
     className: BoolOperator1
   - hash:
       serializedVersion: 2
-      Hash: e49bb3d6eabaced376a39b1d04b4000f
+      Hash: 753beacd4f10df4006f3f5d124e9706a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyMovement
@@ -2654,7 +2715,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 6912216176dce6375f2f46570032aa82
+      Hash: 67acc293182c0241f7cb5390ac10cf47
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SelectControl
@@ -2702,7 +2763,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 2ce3d32870531e6bef9000841ae69d09
+      Hash: ec184cc69c9bf678ecf424d1e5be412c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MonsterDictionary

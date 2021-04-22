@@ -15,6 +15,8 @@ public class DialogueInBattle : MonoBehaviour
     public Text DialogueTextBox;
     public Animator PlayerAnimator;
 
+    public AudioClip ConfirmAudio, ConfirmAudio2, ChangeAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,6 +55,7 @@ public class DialogueInBattle : MonoBehaviour
             //Input to progress dialogue
             if (Input.GetButtonDown("Select") || Input.GetMouseButtonDown(0))
             {
+                GetComponent<AudioSource>().PlayOneShot(ChangeAudio);
                 ResetText();
                 CurrentDialNum++;
             }

@@ -17,6 +17,8 @@ public class SelectControl : MonoBehaviour
     
     public GameObject CollisionCheck, PosLimit, NegLimit;
 
+    public AudioClip ConfirmAudio, ConfirmAudio2, ChangeAudio, CancelAudio;
+
     // Update is called once per frame
     void Update()
     {
@@ -236,11 +238,13 @@ public class SelectControl : MonoBehaviour
                         {
                             if (ActivePlayer.MyState == UnitState.DecidingMove)
                             {
+                                GetComponent<AudioSource>().PlayOneShot(ConfirmAudio);
                                 ActivePlayer.StartMoving(PositionTile, true);
                                 Active = false;
                             }
                             else if (ActivePlayer.MyState == UnitState.DecidingAttack)
                             {
+                                GetComponent<AudioSource>().PlayOneShot(ConfirmAudio);
                                 ActivePlayer.Attack(PositionTile);
                                 Active = false;
                             }
@@ -248,7 +252,6 @@ public class SelectControl : MonoBehaviour
                     }
                     else
                     {
-
                         //search for player then Show Move
                         PlayerMovement PlayerAtPosition = SearchForPlayer();
                         if (PlayerAtPosition && PlayerAtPosition.MyState == UnitState.Ready && !FindObjectOfType<GameManager>().CheckForDead()) ActivePlayer = PlayerAtPosition;
@@ -256,6 +259,7 @@ public class SelectControl : MonoBehaviour
                         {
                             FindObjectOfType<MapControl>().RefreshHighlight(1);
                             ActivePlayer.ShowMove();
+                            GetComponent<AudioSource>().PlayOneShot(ConfirmAudio);
                         }
                     }
                 }
@@ -264,6 +268,7 @@ public class SelectControl : MonoBehaviour
                 {
                     if (PositionTile.StartingTileId == 1)
                     {
+                        GetComponent<AudioSource>().PlayOneShot(ConfirmAudio);
                         PlayerMovement PlayerAtPosition = SearchForPlayer();
                         if (!PlayerAtPosition)
                         {
@@ -287,10 +292,12 @@ public class SelectControl : MonoBehaviour
                 {
                     if (ActivePlayer.MyState == UnitState.DecidingMove)
                     {
+                        GetComponent<AudioSource>().PlayOneShot(CancelAudio);
                         ActivePlayer.Reset();
                     }
                     else if (ActivePlayer.MyState == UnitState.DecidingAttack)
                     {
+                        GetComponent<AudioSource>().PlayOneShot(CancelAudio);
                         PositionTile = ActivePlayer.PositionTile;
                         FindObjectOfType<PlayerStatUIControl>().HideStats(3);
                         ActivePlayer.ShowActions();

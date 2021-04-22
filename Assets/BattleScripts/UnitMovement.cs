@@ -23,6 +23,7 @@ public class UnitMovement : MonoBehaviour
     public int MonsterId;
     public string MyName = "Bob";
     public int MovementPoints, AttackRange, MaxHealth = 100, CurrentHealth = 100, AttackStat = 2, DefenceStat = 1, Level = 1, Exp = 0;
+    public int PassiveLevel = 1;
     public UnitState MyState = UnitState.Done;
     public Owner MyOwner;
     public Element MyElement = Element.Neutral;
@@ -34,6 +35,12 @@ public class UnitMovement : MonoBehaviour
     //Reverse REF
     public UnitListing MyListing;
 
+    //Audio holders
+    public AudioClip TakeDamageSound, DeathSound, WalkSound;
+
+    //Find Object References
+    protected MapControl mapControl;
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -42,6 +49,8 @@ public class UnitMovement : MonoBehaviour
         gameObject.transform.position = PositionTile.transform.position + PosOffset;
         //SetTileOccupy(true, false);
         StartTurnTile = PositionTile;
+
+        mapControl = FindObjectOfType<MapControl>();
     }
 
     // Update is called once per frame
@@ -175,7 +184,7 @@ public class UnitMovement : MonoBehaviour
     
     public object[] GetStats()
     {
-        object[] MyStats = new object[7];
+        object[] MyStats = new object[8];
         MyStats[0] = MyName;
         MyStats[1] = (float)MaxHealth;
         MyStats[2] = (float)CurrentHealth;
@@ -183,6 +192,7 @@ public class UnitMovement : MonoBehaviour
         MyStats[4] = DefenceStat;
         MyStats[5] = MovementPoints;
         MyStats[6] = AttackRange;
+        MyStats[7] = Level;
         return MyStats;
     }
 
@@ -198,10 +208,12 @@ public class UnitMovement : MonoBehaviour
                 SetMyColor();
                 SetTileOccupy(false, false);
                 if (gameObject.GetComponent<Animator>()) { gameObject.GetComponent<Animator>().SetTrigger("Die"); }
+                if (GetComponent<AudioSource>()) GetComponent<AudioSource>().PlayOneShot(DeathSound);
             }
             else
             {
                 if (gameObject.GetComponent<Animator>()) { gameObject.GetComponent<Animator>().SetTrigger("Hit"); }
+                if (GetComponent<AudioSource>()) GetComponent<AudioSource>().PlayOneShot(TakeDamageSound);
             }
             float Percentage = ((float)CurrentHealth / (float)MaxHealth);
             HealthScript.SetPos(PositionTile.transform.position);
@@ -241,8 +253,15 @@ public class UnitMovement : MonoBehaviour
         FindObjectOfType<MapControl>().DeselectAll();
         SetTileOccupy(false, false);
         if (gameObject.GetComponent<Animator>()) { gameObject.GetComponent<Animator>().SetBool("Walking", true); }
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().clip = WalkSound;
+            GetComponent<AudioSource>().loop = true;
+            GetComponent<AudioSource>().Play();
+        }
         //HealthBarCanvas.SetActive(false);
         //HealthScript.TurnOff();
+
 
         MyState = UnitState.Moving;
     }
@@ -251,6 +270,10 @@ public class UnitMovement : MonoBehaviour
     {
         FindObjectOfType<MapControl>().DeselectAll();
         if (gameObject.GetComponent<Animator>()) { gameObject.GetComponent<Animator>().SetBool("Walking", false); }
+        if (GetComponent<AudioSource>())
+        {
+            GetComponent<AudioSource>().Stop();
+        }
         SetTileOccupy(true, false);
         //HealthBarCanvas.SetActive(true);
         //HealthBarCanvas.transform.position = PositionTile.transform.position + new Vector3(-2f, 5f, -2f);
@@ -268,6 +291,11 @@ public class UnitMovement : MonoBehaviour
         gameObject.transform.LookAt(t.transform.position + PosOffset);
         LookDirection = (t.Position - PositionTile.Position);
         if (gameObject.GetComponent<Animator>()) { gameObject.GetComponent<Animator>().SetTrigger("Attack"); }
+        if (gameObject.GetComponent<AudioSource>())
+        {
+            AudioClip attsound = FindObjectOfType<AttackDictionary>().AttackList[ActiveAttackId - 1].AttSound;
+            gameObject.GetComponent<AudioSource>().PlayOneShot(attsound);
+        }
         AttackStartTime = Time.time;
         MyState = UnitState.Attacking;
     }

@@ -8,14 +8,6 @@ public enum Element { Neutral, Rock, Paper, Scissors, Pencil};
 public enum Owner { Player, Enemy };
 public enum UnitState { Ready, Moving, Attacking, Done, DecidingAttack, DecidingMove, DecidingAction, Passive };
 
-public class Stats
-{
-    public string MyName;
-    public int MovementPoints, AttackRange, MaxHealth, AttackStat, DefenceStat;
-    public Element MyElement;
-    public int[] AttackList;
-}
-
 public class GameManager : MonoBehaviour
 {
     GameObject TitlePanel, TurnPanel;
@@ -34,6 +26,9 @@ public class GameManager : MonoBehaviour
     public GameObject HealthUI, AlertUI, ArrowUI;
     public GameObject UIHost;
     public EXPDisplay EX;
+
+    public AudioSource MusicManager;
+    public AudioClip BattleMusic, VictoryMusic;
 
     public UnitListing[] EnemyUnits;
     public UnitListing[] PlayerUnits;
@@ -110,12 +105,17 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            
             StartGame();
         }
     }
 
     public void StartGame()
     {
+        //music
+        MusicManager.clip = BattleMusic;
+        MusicManager.Play();
+        //
         List<UnitListing> FriendlyUnits = new List<UnitListing>();
         foreach (UnitListing unit in FindObjectsOfType<UnitListing>())
         {
@@ -158,20 +158,13 @@ public class GameManager : MonoBehaviour
             MM = Monster.AddComponent<EnemyMovement>();
             Monster.transform.Rotate(0, 180, 0);
         }
+        //identification stats
         MM.MonsterId = UnitListing.MonsterId;
         MM.MyOwner = UnitListing.Controller;
         MM.PositionTile = UnitListing.StartingTile;
         MM.MyName = UnitListing.MyName;
 
-        //reworked
-        /*
-        MM.MovementPoints = UnitListing.MovementPoints;
-        MM.AttackRange = UnitListing.AttackRange;
-        MM.MaxHealth = UnitListing.MaxHealth;
-        MM.CurrentHealth = UnitListing.MaxHealth;
-        MM.AttackStat = UnitListing.AttackStat;
-        MM.DefenceStat = UnitListing.DefenceStat;
-        */
+        //RPG stats
         int level = UnitListing.MyLevel;
         MM.MovementPoints = MonDictionary.SpeedBaseStat[UnitListing.MonsterId];
         MM.AttackRange = 1;
@@ -182,14 +175,26 @@ public class GameManager : MonoBehaviour
         MM.Level = level;
         MM.Exp = UnitListing.Exp;
         
+        //Element and Attacks and AI
         MM.MyElement = UnitListing.MyElement;
-        MM.AttackIDs = UnitListing.AttackList;
+        //MM.AttackIDs = UnitListing.AttackList;
+        //MM.AttackIDs = new int[] {1, 4, 5 };
+        AttackDictionary AD = FindObjectOfType<AttackDictionary>();
+        MM.AttackIDs = AD.GetAttacks(UnitListing.MonsterId, level);
+        MM.PassiveLevel = UnitListing.PassiveLevel;
 
+        //Audio files
+        MM.TakeDamageSound = MonDictionary.TakeDamageSound[UnitListing.MonsterId];
+        MM.DeathSound = MonDictionary.DeathSound[UnitListing.MonsterId];
+        MM.WalkSound = MonDictionary.WalkSound[UnitListing.MonsterId];
+
+        //UI settings
         MM.HealthScript = (Instantiate(HealthUI, UIHost.transform)).GetComponent<HealthAnimScript>();
         MM.AlertBox = Instantiate(AlertUI, UIHost.transform);
         MM.AlertText = MM.AlertBox.transform.Find("Text").gameObject;
         //MM.MyBody = MM.transform.Find("Monster").gameObject;
 
+        //Setup for use
         MM.MyState = UnitState.Passive;
         if (MM.MyOwner == Owner.Player)
         {
@@ -296,7 +301,14 @@ public class GameManager : MonoBehaviour
         if (GameEnd)
         {
             GameFinished = true;
-            if (!EnemyExist) StartCoroutine(EX.DoExp()); //leads to EndBattleInstance(!EnemyExist);
+            if (!EnemyExist)
+            {
+                MusicManager.loop = false;
+                MusicManager.clip = VictoryMusic;
+                MusicManager.Play();
+
+                StartCoroutine(EX.DoExp()); //leads to EndBattleInstance(!EnemyExist);
+            }
             else EndBattleInstance(false);
         }
         

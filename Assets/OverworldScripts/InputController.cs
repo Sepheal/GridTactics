@@ -50,7 +50,6 @@ public class InputController : MonoBehaviour
         {
             Vector3 TranslateValue;
             float MultiplyValue;
-            print(Accel);
             if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal") != 0)
             {
                 Accel += 0.5f * Time.deltaTime;

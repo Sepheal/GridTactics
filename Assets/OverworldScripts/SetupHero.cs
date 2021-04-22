@@ -89,7 +89,15 @@ public class SetupHero : MonoBehaviour
             PM.Exp = PS.PlayerExp;
 
             PM.MyElement = PS.PElement;
-            PM.AttackIDs = PS.PAttacks;
+            //PM.AttackIDs = PS.PAttacks;
+            AttackDictionary AD = FindObjectOfType<AttackDictionary>();
+            PM.AttackIDs = AD.GetAttacks(2, PM.Level);
+
+            //Audio files
+            PM.TakeDamageSound = Dictionary.TakeDamageSound;
+            PM.DeathSound = Dictionary.DeathSound;
+            PM.WalkSound = Dictionary.WalkSound;
+
             PM.LookDirection = new Vector2(1, 0);
             PM.StartTurnLookDirection = new Vector2(1, 0);
             foreach (Tile item in FindObjectsOfType<Tile>())

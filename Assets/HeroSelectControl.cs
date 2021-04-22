@@ -28,11 +28,15 @@ public class HeroSelectControl : MonoBehaviour
 
     PersistantStats PS;
 
+    public AudioClip ConfirmAudio, ConfirmAudio2, ChangeAudio;
+    AudioSource Audio;
+
     // Start is called before the first frame update
     void Start()
     {
         UpdateChoice(0);
         PS = FindObjectOfType<PersistantStats>();
+        Audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -72,18 +76,24 @@ public class HeroSelectControl : MonoBehaviour
 
     public void RightClicked()
     {
+        Audio.PlayOneShot(ChangeAudio);
+
         if (CustomStage < (NumOfStages - 2)) UpdateChoice(CustomStage + 1);
         else UpdateChoice(NumOfStages - 1);
     }
 
     public void LeftClicked()
     {
+        Audio.PlayOneShot(ChangeAudio);
+
         if (CustomStage > 1) UpdateChoice(CustomStage-1);
         else UpdateChoice(0);
     }
 
     public void ToggleTorso(int Id)
     {
+        PlaySound();
+
         Torsos[TorsoChoice].SetActive(false);
         TorsoChoice = Id;
         Torsos[TorsoChoice].SetActive(true);
@@ -91,6 +101,8 @@ public class HeroSelectControl : MonoBehaviour
 
     public void ToggleShoe(int Id)
     {
+        PlaySound();
+
         Shoes[ShoeChoice].SetActive(false);
         ShoeChoice = Id;
         Shoes[ShoeChoice].SetActive(true);
@@ -98,10 +110,10 @@ public class HeroSelectControl : MonoBehaviour
 
     public void ToggleHair(int Id)
     {
-        //Hairs[HairChoice].SetActive(false);
+        PlaySound();
+
         HideHairs();
         HairChoice = Id;
-        //Hairs[HairChoice].SetActive(true);
         SetHair(HairChoice);
     }
 
@@ -135,6 +147,8 @@ public class HeroSelectControl : MonoBehaviour
 
     public void ToggleFace(int Id)
     {
+        PlaySound();
+
         Faces[FaceChoice].SetActive(false);
         FaceChoice = Id;
         Faces[FaceChoice].SetActive(true);
@@ -142,6 +156,8 @@ public class HeroSelectControl : MonoBehaviour
 
     public void ToggleGloves(int Id)
     {
+        PlaySound();
+
         Gloves[GloveChoice].SetActive(false);
         GloveChoice = Id;
         Gloves[GloveChoice].SetActive(true);
@@ -149,6 +165,8 @@ public class HeroSelectControl : MonoBehaviour
 
     public void ToggleShoulders(int Id)
     {
+        PlaySound();
+
         if (Shoulders[ShoulderChoice]) Shoulders[ShoulderChoice].SetActive(false);
         ShoulderChoice = Id;
         if (Shoulders[ShoulderChoice]) Shoulders[ShoulderChoice].SetActive(true);
@@ -156,6 +174,8 @@ public class HeroSelectControl : MonoBehaviour
 
     public void ToggleBelt(int Id)
     {
+        PlaySound();
+
         if (Belts[BeltChoice]) Belts[BeltChoice].SetActive(false);
         BeltChoice = Id;
         if (Belts[BeltChoice]) Belts[BeltChoice].SetActive(true);
@@ -163,15 +183,22 @@ public class HeroSelectControl : MonoBehaviour
 
     public void ToggleHeadgear(int Id)
     {
+        PlaySound();
+
         if (Headgears[HeadChoice]) Headgears[HeadChoice].SetActive(false);
         HeadChoice = Id;
         if (Headgears[HeadChoice]) Headgears[HeadChoice].SetActive(true);
 
-        ToggleHair(HairChoice);
+        //ToggleHair(HairChoice);
+        HideHairs();
+        SetHair(HairChoice);
     }
 
     public void randomisechoices()
     {
+        PlaySound();
+        //Audio.enabled = false;
+
         ToggleHair(Random.Range(0, 5));
         ToggleFace(Random.Range(0, Faces.Length));
         ToggleHeadgear(Random.Range(0, Headgears.Length));
@@ -180,13 +207,22 @@ public class HeroSelectControl : MonoBehaviour
         ToggleGloves(Random.Range(0, Gloves.Length));
         ToggleShoulders(Random.Range(0, Shoulders.Length));
         ToggleBelt(Random.Range(0, Belts.Length));
+
+        //Audio.enabled = true;
     }
 
     public void ConfirmHero()
     {
+        Audio.PlayOneShot(ConfirmAudio2);
+
         StartCoroutine(MoveOn());
 
         StartCoroutine(FindObjectOfType<LevelLoader>().LoadLevel("DreamWorld"));
+    }
+
+    void PlaySound()
+    {
+        if (!Audio.isPlaying) Audio.PlayOneShot(ConfirmAudio);
     }
 
     public IEnumerator MoveOn()
@@ -195,13 +231,10 @@ public class HeroSelectControl : MonoBehaviour
         yield return waitForEndOfFrame;
 
         int X = HeroTexture.width, Y = HeroTexture.height;
-
         Texture2D Screenshot = new Texture2D(X, Y, TextureFormat.RGBA32, false);
-        //Cam.GetComponent<Camera>().enabled = false;
         RenderTexture.active = HeroTexture;
         HeroCam.GetComponent<Camera>().Render();
         Screenshot.ReadPixels(new Rect(0, 0, X, Y), 0, 0);
-        //Screenshot.Apply();
 
         for (int i = 0; i < Screenshot.width; i++)
         {
