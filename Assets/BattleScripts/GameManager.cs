@@ -34,8 +34,8 @@ public class GameManager : MonoBehaviour
     public UnitListing[] PlayerUnits;
 
     public List<string> StartDialogue;
-
-    float PauseTimeStart, PauseLength = 2.0f;
+    private float PauseTimeStart;
+    private readonly float PauseLength = 2.0f;
 
     private void Awake()
     {
@@ -47,8 +47,7 @@ public class GameManager : MonoBehaviour
         GetComponent<DialogueInBattle>().DialogueTextBox = CanvasUI.transform.Find("Dialogue").Find("Text").GetComponent<Text>();
         EX = CanvasUI.transform.Find("EXPScreen").GetComponent<EXPDisplay>();
         MonDictionary = (Instantiate(MonsterDictionaryObject)).GetComponent<MonsterDictionary>();
-        FindObjectOfType<PlayerStatUIControl>().MonsterSpritesRight = MonDictionary.MonsterSpritesRight;
-        FindObjectOfType<PlayerStatUIControl>().MonsterSpritesLeft = MonDictionary.MonsterSpritesLeft;
+        FindObjectOfType<PlayerStatUIControl>().MonsterList = MonDictionary.Monsters;
     }
 
     // Start is called before the first frame update
@@ -146,7 +145,8 @@ public class GameManager : MonoBehaviour
 
     public void SpawnUnit(UnitListing UnitListing)
     {
-        GameObject Monster = Instantiate(MonDictionary.MonDictionaryPrefabs[UnitListing.MonsterId]);
+        Monster MyMonster = MonDictionary.Monsters[UnitListing.MonsterId];
+        GameObject Monster = Instantiate(MyMonster.MonPrefab);
         UnitMovement MM;
         if (UnitListing.Controller == Owner.Player)
         {
@@ -166,27 +166,24 @@ public class GameManager : MonoBehaviour
 
         //RPG stats
         int level = UnitListing.MyLevel;
-        MM.MovementPoints = MonDictionary.SpeedBaseStat[UnitListing.MonsterId];
+        MM.MovementPoints = MyMonster.SpeedBaseStat; //MonDictionary.SpeedBaseStat[UnitListing.MonsterId];
         MM.AttackRange = 1;
-        MM.MaxHealth = MonDictionary.HPBaseStat[UnitListing.MonsterId] + (MonDictionary.HPBaseStat[UnitListing.MonsterId]/10 * level);
+        MM.MaxHealth = MyMonster.HPBaseStat + (MyMonster.HPBaseStat / 10 * level);  //MonDictionary.HPBaseStat[UnitListing.MonsterId] + (MonDictionary.HPBaseStat[UnitListing.MonsterId]/10 * level);
         MM.CurrentHealth = MM.MaxHealth;
-        MM.AttackStat = MonDictionary.AttackBaseStat[UnitListing.MonsterId] * level;
-        MM.DefenceStat = MonDictionary.DefenceBaseStat[UnitListing.MonsterId] * level;
+        MM.AttackStat = MyMonster.AttackBaseStat * level; //MonDictionary.AttackBaseStat[UnitListing.MonsterId] * level;
+        MM.DefenceStat = MyMonster.DefenceBaseStat * level; //MonDictionary.DefenceBaseStat[UnitListing.MonsterId] * level;
         MM.Level = level;
         MM.Exp = UnitListing.Exp;
-        
+
         //Element and Attacks and AI
-        MM.MyElement = UnitListing.MyElement;
-        //MM.AttackIDs = UnitListing.AttackList;
-        //MM.AttackIDs = new int[] {1, 4, 5 };
-        AttackDictionary AD = FindObjectOfType<AttackDictionary>();
-        MM.AttackIDs = AD.GetAttacks(UnitListing.MonsterId, level);
+        MM.MyElement = MyMonster.MyElement; //UnitListing.MyElement;
+        MM.AttackIDs = MonDictionary.GetAttacks(UnitListing.MonsterId, level); //AD.GetAttacks(UnitListing.MonsterId, level);
         MM.PassiveLevel = UnitListing.PassiveLevel;
 
         //Audio files
-        MM.TakeDamageSound = MonDictionary.TakeDamageSound[UnitListing.MonsterId];
-        MM.DeathSound = MonDictionary.DeathSound[UnitListing.MonsterId];
-        MM.WalkSound = MonDictionary.WalkSound[UnitListing.MonsterId];
+        MM.TakeDamageSound = MyMonster.TakeDamageSound; //MonDictionary.TakeDamageSound[UnitListing.MonsterId];
+        MM.DeathSound = MyMonster.DeathSound; //MonDictionary.DeathSound[UnitListing.MonsterId];
+        MM.WalkSound = MyMonster.WalkSound; //MonDictionary.WalkSound[UnitListing.MonsterId];
 
         //UI settings
         MM.HealthScript = (Instantiate(HealthUI, UIHost.transform)).GetComponent<HealthAnimScript>();

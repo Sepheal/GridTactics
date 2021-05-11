@@ -123,6 +123,12 @@ public class UnitMovement : MonoBehaviour
             }
             else
             {
+                ///Add to dex
+                if (MyOwner == Owner.Enemy)
+                {
+                    if (FindObjectOfType<PersistantStats>().MonsterDex[MonsterId] == 0) FindObjectOfType<PersistantStats>().MonsterDex[MonsterId] = 1;
+                }
+
                 Destroy(this.gameObject);
             }
         }

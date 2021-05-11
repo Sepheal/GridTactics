@@ -43,6 +43,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84099c1ac134c9d458b7d99389afd620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackList:
+  - ID: 1
+    Name: Tackle
+    BaseDamage: 30
+    AOEID: 1
+    AttSound: {fileID: 8300000, guid: 3a32fb6284f476d4dacd3a98ec025e14, type: 3}
+  - ID: 2
+    Name: Wave Slap
+    BaseDamage: 15
+    AOEID: 2
+    AttSound: {fileID: 8300000, guid: b8724565b99db4842befc8ce6ffa80a0, type: 3}
+  - ID: 3
+    Name: Twin Poke
+    BaseDamage: 15
+    AOEID: 3
+    AttSound: {fileID: 8300000, guid: bcdee21790fcef147b27aa5c033a59b4, type: 3}
+  - ID: 4
+    Name: String Shot
+    BaseDamage: 20
+    AOEID: 4
+    AttSound: {fileID: 8300000, guid: bd90ff8c85e33a24ebb39307a58aec68, type: 3}
+  - ID: 5
+    Name: Shell Stab
+    BaseDamage: 25
+    AOEID: 1
+    AttSound: {fileID: 8300000, guid: 83d7e70ab26742c45a4063062651f692, type: 3}
+  - ID: 6
+    Name: Axe Slice
+    BaseDamage: 30
+    AOEID: 1
+    AttSound: {fileID: 8300000, guid: 6a9e6908d78985f4392c795fa5aad92e, type: 3}
+  - ID: 7
+    Name: String Spray
+    BaseDamage: 20
+    AOEID: 5
+    AttSound: {fileID: 8300000, guid: bd90ff8c85e33a24ebb39307a58aec68, type: 3}
+  - ID: 8
+    Name: Spider Slam
+    BaseDamage: 25
+    AOEID: 2
+    AttSound: {fileID: 8300000, guid: b8724565b99db4842befc8ce6ffa80a0, type: 3}
   AttNames:
   - Tackle
   - Wave Slap

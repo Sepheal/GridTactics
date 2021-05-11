@@ -1487,9 +1487,8 @@ MonoBehaviour:
   MyLevel: 1
   Exp: 0
   StartingTile: {fileID: 0}
-  MyName: Slime
-  MyElement: 2
-  AttackList: 0100000003000000
+  MyName: Slimeo
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!4 &279467755 stripped
@@ -3457,11 +3456,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsActive: 1
+  IsInMenu: 0
   MyCharacter: {fileID: 0}
   RotHolder: {fileID: 654768964}
   WalkCheck: {fileID: 71881716}
   SpawnHolder: {fileID: 2112153375}
   StartingPosition: {fileID: 2127307802}
+  overworldMenu: {fileID: 0}
 --- !u!4 &943932160
 Transform:
   m_ObjectHideFlags: 0
@@ -4908,8 +4909,8 @@ MonoBehaviour:
   Rotation: {x: 0, y: 0, z: 0, w: 0}
   PreviousSceneName: 
   EncounterIdMessage: 0
-  EncounterList: 00000000000000000000
-  PName: 
+  EncounterList: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  PName: rawr
   PlayerLevel: 1
   PlayerExp: 0
   PElement: 0
@@ -4917,6 +4918,7 @@ MonoBehaviour:
   HeroId: 0
   HeroCloths: 0000000000000000000000000000000000000000000000000000000000000000
   HeroImage: {fileID: 0}
+  MonsterDex: 0200000000000000020000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1473425894
 Transform:
   m_ObjectHideFlags: 0

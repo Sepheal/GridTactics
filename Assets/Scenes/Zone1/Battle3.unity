@@ -346,12 +346,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Controller: 1
   MonsterId: 5
-  MyLevel: 3
+  MyLevel: 2
   Exp: 0
   StartingTile: {fileID: 2081074442}
   MyName: Spider
-  MyElement: 2
-  AttackList: 04000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1001 &105327958
@@ -488,8 +487,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 1110664267}
   MyName: Slime
-  MyElement: 2
-  AttackList: 01000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1001 &156578869
@@ -964,7 +962,7 @@ MonoBehaviour:
   Rotation: {x: 0, y: 0, z: 0, w: 0}
   PreviousSceneName: 
   EncounterIdMessage: 0
-  EncounterList: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  EncounterList: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   PName: 
   PlayerLevel: 3
   PlayerExp: 0
@@ -973,6 +971,7 @@ MonoBehaviour:
   HeroId: 0
   HeroCloths: 0000000000000000000000000000000000000000000000000000000000000000
   HeroImage: {fileID: 0}
+  MonsterDex: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &363448368
 Transform:
   m_ObjectHideFlags: 0
@@ -7351,8 +7350,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 0}
   MyName: Spider
-  MyElement: 2
-  AttackList: 0100000003000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!4 &967526643 stripped
@@ -11332,8 +11330,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 0}
   MyName: Shell
-  MyElement: 2
-  AttackList: 0100000003000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!4 &1360020304 stripped
@@ -11795,8 +11792,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 0}
   MyName: Slime
-  MyElement: 2
-  AttackList: 0100000003000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1001 &1599220116

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Zone1/Battle6.unity
+- path: Assets/Scenes/Zone1/Overworld.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

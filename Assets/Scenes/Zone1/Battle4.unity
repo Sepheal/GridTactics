@@ -1053,8 +1053,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 1161490062}
   MyName: Big Spider
-  MyElement: 2
-  AttackList: 04000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1001 &554787617
@@ -1639,8 +1638,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 0}
   MyName: Slime
-  MyElement: 2
-  AttackList: 0100000003000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1 &890406946
@@ -3032,8 +3030,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 0}
   MyName: Spider
-  MyElement: 2
-  AttackList: 0100000003000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1001 &1273932861
@@ -3361,8 +3358,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 0}
   MyName: Shell
-  MyElement: 2
-  AttackList: 0100000003000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1001 &1320358684
@@ -9313,7 +9309,7 @@ MonoBehaviour:
   Rotation: {x: 0, y: 0, z: 0, w: 0}
   PreviousSceneName: 
   EncounterIdMessage: 0
-  EncounterList: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  EncounterList: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   PName: 
   PlayerLevel: 2
   PlayerExp: 70
@@ -9322,6 +9318,7 @@ MonoBehaviour:
   HeroId: 0
   HeroCloths: 0000000000000000000000000000000000000000000000000000000000000000
   HeroImage: {fileID: 0}
+  MonsterDex: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1766304361
 Transform:
   m_ObjectHideFlags: 0
@@ -9957,8 +9954,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 1549740864}
   MyName: Spider
-  MyElement: 2
-  AttackList: 04000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1 &2096689737

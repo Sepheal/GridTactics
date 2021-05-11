@@ -857,8 +857,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 0}
   MyName: Red Slime
-  MyElement: 2
-  AttackList: 0100000003000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1 &1078440093
@@ -1643,8 +1642,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 0}
   MyName: Small Spider
-  MyElement: 2
-  AttackList: 04000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1 &1665046559
@@ -2063,7 +2061,7 @@ MonoBehaviour:
   Rotation: {x: 0, y: 0, z: 0, w: 0}
   PreviousSceneName: HomeScene
   EncounterIdMessage: 2
-  EncounterList: 0000000000000000000000000000000000000000
+  EncounterList: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   PName: 
   PlayerLevel: 1
   PlayerExp: 0
@@ -2072,6 +2070,7 @@ MonoBehaviour:
   HeroId: 0
   HeroCloths: 
   HeroImage: {fileID: 0}
+  MonsterDex: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1796673182
 Transform:
   m_ObjectHideFlags: 0

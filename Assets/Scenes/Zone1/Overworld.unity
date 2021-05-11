@@ -2446,7 +2446,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337060035}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b999fa049dd276499ebe3f8c7dee9b4, type: 3}
   m_Name: 
@@ -8477,7 +8477,7 @@ MonoBehaviour:
   Rotation: {x: 0, y: 0, z: 0, w: 0}
   PreviousSceneName: 
   EncounterIdMessage: 0
-  EncounterList: 00000000000000000000
+  EncounterList: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   PName: 
   PlayerLevel: 1
   PlayerExp: 0
@@ -8486,6 +8486,7 @@ MonoBehaviour:
   HeroId: 0
   HeroCloths: 0000000000000000000000000000000000000000000000000000000000000000
   HeroImage: {fileID: 0}
+  MonsterDex: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1183416259
 Transform:
   m_ObjectHideFlags: 0
@@ -9573,11 +9574,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsActive: 1
+  IsInMenu: 0
   MyCharacter: {fileID: 997014137}
   RotHolder: {fileID: 1364688825}
   WalkCheck: {fileID: 104380705}
   SpawnHolder: {fileID: 1833879571}
   StartingPosition: {fileID: 101206935}
+  overworldMenu: {fileID: 0}
 --- !u!4 &1325660341
 Transform:
   m_ObjectHideFlags: 0

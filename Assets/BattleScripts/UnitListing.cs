@@ -11,7 +11,6 @@ public class UnitListing : MonoBehaviour
     public Tile StartingTile;
 
     public string MyName;
-    public Element MyElement;
     public int PassiveLevel = 1;
 
     public bool Placed = false;

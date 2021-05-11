@@ -21,7 +21,9 @@ public class DialogueOverworld : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DialogueContainer = Instantiate(UIPrefab).transform.Find("Dialogue").gameObject;
+        GameObject UI = Instantiate(UIPrefab);
+        FindObjectOfType<InputController>().overworldMenu = UI.transform.Find("Menu").GetComponent<OverworldMenu>();
+        DialogueContainer = UI.transform.Find("Dialogue").gameObject;
         DialogueTextBox = DialogueContainer.transform.Find("Text").GetComponent<Text>();
     }
 

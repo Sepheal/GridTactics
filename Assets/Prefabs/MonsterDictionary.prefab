@@ -43,61 +43,152 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15f213ee51bb2fa4a98053165ccb9406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MonDictionaryPrefabs:
-  - {fileID: 3677277266853654427, guid: 2ceb33f9a3d3a4a418277f526ec8c55e, type: 3}
-  - {fileID: 3991260469673269575, guid: 338c4593306684a44b39d8cbb5756e52, type: 3}
-  - {fileID: 0}
-  - {fileID: 8891585112564803071, guid: 7a0d92450f3f11d4fbc2d0d2cf30aacb, type: 3}
-  - {fileID: 5678083196196559860, guid: b70fa5d1a64806d4e8b7600388483960, type: 3}
-  - {fileID: 801791466655942161, guid: 13a9f9e212727744abd2453ced153f17, type: 3}
-  - {fileID: 9043372740616889128, guid: 580369a26a5fb50468bcdfdd5e6500b0, type: 3}
-  - {fileID: 9043372740616889128, guid: 8bc2b6bfafd7c0a47a909349d7f3fba8, type: 3}
-  MonsterSpritesRight:
-  - {fileID: 21300000, guid: cf425c7d96f6343438de745ea232dca8, type: 3}
-  - {fileID: 21300000, guid: ea9cd8bec615e2a4ca07b598d7ec6589, type: 3}
-  - {fileID: 21300000, guid: 1aea7aeac0e9e0a499fe27508ba30035, type: 3}
-  - {fileID: 21300000, guid: 66642fb02e8f36145a60c31877462bb2, type: 3}
-  - {fileID: 21300000, guid: 42f6466cd000e8548a13e6765bfaff94, type: 3}
-  - {fileID: 21300000, guid: 34f7798df9015724d99787c3db10745d, type: 3}
-  - {fileID: 21300000, guid: 542197d2d9e81c14f8098f5e7a52bca5, type: 3}
-  - {fileID: 21300000, guid: 542197d2d9e81c14f8098f5e7a52bca5, type: 3}
-  MonsterSpritesLeft:
-  - {fileID: 21300000, guid: 4f2ffeaf7c0df524097c3f364a21b29f, type: 3}
-  - {fileID: 21300000, guid: ab302f4322bd5ef45b614fb69ce22029, type: 3}
-  - {fileID: 0}
-  - {fileID: 21300000, guid: 39533d63981a8654aba8f13275152d4e, type: 3}
-  - {fileID: 21300000, guid: 07e22252270562c4990f8c9cfb065fde, type: 3}
-  - {fileID: 21300000, guid: 470e1db129453b446a1c01282bdc4e3b, type: 3}
-  - {fileID: 21300000, guid: b7c468ae5f2ec2843bebdd03a0f29c7b, type: 3}
-  - {fileID: 21300000, guid: b7c468ae5f2ec2843bebdd03a0f29c7b, type: 3}
-  AttackBaseStat: 0200000001000000050000000200000001000000010000000100000002000000
-  DefenceBaseStat: 0100000002000000030000000100000002000000010000000100000002000000
-  SpeedBaseStat: 0200000001000000020000000200000001000000030000000200000001000000
-  HPBaseStat: 64000000780000006400000064000000780000005000000064000000c8000000
-  TakeDamageSound:
-  - {fileID: 8300000, guid: e6a9e609436669f4f8a02de9a8ce15d2, type: 3}
-  - {fileID: 8300000, guid: 313e8cbface212c4cbd13441d0fb4b64, type: 3}
-  - {fileID: 8300000, guid: 78cf7246e94b2294cad3af281a0f90bf, type: 3}
-  - {fileID: 8300000, guid: e6a9e609436669f4f8a02de9a8ce15d2, type: 3}
-  - {fileID: 8300000, guid: 313e8cbface212c4cbd13441d0fb4b64, type: 3}
-  - {fileID: 8300000, guid: 3167200b9379a594c85d34daf1ab4937, type: 3}
-  - {fileID: 8300000, guid: 3167200b9379a594c85d34daf1ab4937, type: 3}
-  - {fileID: 8300000, guid: 3167200b9379a594c85d34daf1ab4937, type: 3}
-  DeathSound:
-  - {fileID: 8300000, guid: c5097827c6d4a4b4c809dbe8f2b4d9df, type: 3}
-  - {fileID: 8300000, guid: cf72fe33476b38d43a086abaf2c65672, type: 3}
-  - {fileID: 8300000, guid: a75f675495aaa8e4f9d2552a0b292d66, type: 3}
-  - {fileID: 8300000, guid: c5097827c6d4a4b4c809dbe8f2b4d9df, type: 3}
-  - {fileID: 8300000, guid: cf72fe33476b38d43a086abaf2c65672, type: 3}
-  - {fileID: 8300000, guid: f18aea4317addb8409fcc3b2c79e8b76, type: 3}
-  - {fileID: 8300000, guid: f18aea4317addb8409fcc3b2c79e8b76, type: 3}
-  - {fileID: 8300000, guid: f18aea4317addb8409fcc3b2c79e8b76, type: 3}
-  WalkSound:
-  - {fileID: 8300000, guid: 6d82c5d1245a3844f91ea1a036854b0c, type: 3}
-  - {fileID: 8300000, guid: 4a7e6ec17b4cfbe4781b6155ac528c53, type: 3}
-  - {fileID: 8300000, guid: 61d385886e1acd7489ca274665ccbf27, type: 3}
-  - {fileID: 8300000, guid: 6d82c5d1245a3844f91ea1a036854b0c, type: 3}
-  - {fileID: 8300000, guid: 4a7e6ec17b4cfbe4781b6155ac528c53, type: 3}
-  - {fileID: 8300000, guid: efa7cf669548cbf4a9d000c3c5bef47e, type: 3}
-  - {fileID: 8300000, guid: efa7cf669548cbf4a9d000c3c5bef47e, type: 3}
-  - {fileID: 8300000, guid: efa7cf669548cbf4a9d000c3c5bef47e, type: 3}
+  Monsters:
+  - ID: 0
+    MonPrefab: {fileID: 3677277266853654427, guid: 2ceb33f9a3d3a4a418277f526ec8c55e,
+      type: 3}
+    MonsterSpriteRight: {fileID: 21300000, guid: cf425c7d96f6343438de745ea232dca8,
+      type: 3}
+    MonsterSpriteLeft: {fileID: 21300000, guid: 4f2ffeaf7c0df524097c3f364a21b29f,
+      type: 3}
+    AttackBaseStat: 2
+    DefenceBaseStat: 1
+    SpeedBaseStat: 2
+    HPBaseStat: 100
+    MyElement: 0
+    AttackTree: 010000000200000003000000
+    TakeDamageSound: {fileID: 8300000, guid: e6a9e609436669f4f8a02de9a8ce15d2, type: 3}
+    DeathSound: {fileID: 8300000, guid: c5097827c6d4a4b4c809dbe8f2b4d9df, type: 3}
+    WalkSound: {fileID: 8300000, guid: 6d82c5d1245a3844f91ea1a036854b0c, type: 3}
+    Species: Slime
+    Description: A regular slime, seen in most areas of the world. Most slimes are
+      friendly!
+  - ID: 1
+    MonPrefab: {fileID: 3991260469673269575, guid: 338c4593306684a44b39d8cbb5756e52,
+      type: 3}
+    MonsterSpriteRight: {fileID: 21300000, guid: ea9cd8bec615e2a4ca07b598d7ec6589,
+      type: 3}
+    MonsterSpriteLeft: {fileID: 21300000, guid: ab302f4322bd5ef45b614fb69ce22029,
+      type: 3}
+    AttackBaseStat: 1
+    DefenceBaseStat: 2
+    SpeedBaseStat: 1
+    HPBaseStat: 120
+    MyElement: 0
+    AttackTree: 050000000200000004000000
+    TakeDamageSound: {fileID: 8300000, guid: 313e8cbface212c4cbd13441d0fb4b64, type: 3}
+    DeathSound: {fileID: 8300000, guid: cf72fe33476b38d43a086abaf2c65672, type: 3}
+    WalkSound: {fileID: 8300000, guid: 4a7e6ec17b4cfbe4781b6155ac528c53, type: 3}
+    Species: Shell
+    Description: A Shell, these a hard but slow creatures. They don't normally attack
+      unless provoked, but when they do, they can sting.
+  - ID: 2
+    MonPrefab: {fileID: 0}
+    MonsterSpriteRight: {fileID: 0}
+    MonsterSpriteLeft: {fileID: 0}
+    AttackBaseStat: 5
+    DefenceBaseStat: 3
+    SpeedBaseStat: 2
+    HPBaseStat: 100
+    MyElement: 0
+    AttackTree: 060000000300000002000000
+    TakeDamageSound: {fileID: 8300000, guid: 78cf7246e94b2294cad3af281a0f90bf, type: 3}
+    DeathSound: {fileID: 8300000, guid: a75f675495aaa8e4f9d2552a0b292d66, type: 3}
+    WalkSound: {fileID: 8300000, guid: 61d385886e1acd7489ca274665ccbf27, type: 3}
+    Species: Human
+    Description: This is you! You're on a journey to explore the mystical tower!
+  - ID: 3
+    MonPrefab: {fileID: 8891585112564803071, guid: 7a0d92450f3f11d4fbc2d0d2cf30aacb,
+      type: 3}
+    MonsterSpriteRight: {fileID: 21300000, guid: 66642fb02e8f36145a60c31877462bb2,
+      type: 3}
+    MonsterSpriteLeft: {fileID: 21300000, guid: 39533d63981a8654aba8f13275152d4e,
+      type: 3}
+    AttackBaseStat: 2
+    DefenceBaseStat: 1
+    SpeedBaseStat: 2
+    HPBaseStat: 100
+    MyElement: 0
+    AttackTree: 010000000200000003000000
+    TakeDamageSound: {fileID: 8300000, guid: e6a9e609436669f4f8a02de9a8ce15d2, type: 3}
+    DeathSound: {fileID: 8300000, guid: c5097827c6d4a4b4c809dbe8f2b4d9df, type: 3}
+    WalkSound: {fileID: 8300000, guid: 6d82c5d1245a3844f91ea1a036854b0c, type: 3}
+    Species: Slime
+    Description: A blue varient of the slime, these slimes are less common due to
+      the myth that says killing them brings good luck!
+  - ID: 4
+    MonPrefab: {fileID: 5678083196196559860, guid: b70fa5d1a64806d4e8b7600388483960,
+      type: 3}
+    MonsterSpriteRight: {fileID: 21300000, guid: 42f6466cd000e8548a13e6765bfaff94,
+      type: 3}
+    MonsterSpriteLeft: {fileID: 21300000, guid: 07e22252270562c4990f8c9cfb065fde,
+      type: 3}
+    AttackBaseStat: 1
+    DefenceBaseStat: 2
+    SpeedBaseStat: 1
+    HPBaseStat: 120
+    MyElement: 0
+    AttackTree: 050000000200000004000000
+    TakeDamageSound: {fileID: 8300000, guid: 313e8cbface212c4cbd13441d0fb4b64, type: 3}
+    DeathSound: {fileID: 8300000, guid: cf72fe33476b38d43a086abaf2c65672, type: 3}
+    WalkSound: {fileID: 8300000, guid: 4a7e6ec17b4cfbe4781b6155ac528c53, type: 3}
+    Species: Shell
+    Description: A red varient of the shell, these creatures can supposedly produce
+      flames in rare instances, however no picture exists of it
+  - ID: 5
+    MonPrefab: {fileID: 801791466655942161, guid: 13a9f9e212727744abd2453ced153f17,
+      type: 3}
+    MonsterSpriteRight: {fileID: 21300000, guid: 34f7798df9015724d99787c3db10745d,
+      type: 3}
+    MonsterSpriteLeft: {fileID: 21300000, guid: 470e1db129453b446a1c01282bdc4e3b,
+      type: 3}
+    AttackBaseStat: 1
+    DefenceBaseStat: 1
+    SpeedBaseStat: 3
+    HPBaseStat: 80
+    MyElement: 0
+    AttackTree: 040000000100000002000000
+    TakeDamageSound: {fileID: 8300000, guid: 3167200b9379a594c85d34daf1ab4937, type: 3}
+    DeathSound: {fileID: 8300000, guid: f18aea4317addb8409fcc3b2c79e8b76, type: 3}
+    WalkSound: {fileID: 8300000, guid: efa7cf669548cbf4a9d000c3c5bef47e, type: 3}
+    Species: Spider
+    Description: A small and fast creature, mostly harmless unless there is a group
+      of them, in that case watch out for their string attacks!
+  - ID: 6
+    MonPrefab: {fileID: 9043372740616889128, guid: 580369a26a5fb50468bcdfdd5e6500b0,
+      type: 3}
+    MonsterSpriteRight: {fileID: 21300000, guid: 542197d2d9e81c14f8098f5e7a52bca5,
+      type: 3}
+    MonsterSpriteLeft: {fileID: 21300000, guid: b7c468ae5f2ec2843bebdd03a0f29c7b,
+      type: 3}
+    AttackBaseStat: 1
+    DefenceBaseStat: 1
+    SpeedBaseStat: 2
+    HPBaseStat: 100
+    MyElement: 0
+    AttackTree: 040000000100000002000000
+    TakeDamageSound: {fileID: 8300000, guid: 3167200b9379a594c85d34daf1ab4937, type: 3}
+    DeathSound: {fileID: 8300000, guid: f18aea4317addb8409fcc3b2c79e8b76, type: 3}
+    WalkSound: {fileID: 8300000, guid: efa7cf669548cbf4a9d000c3c5bef47e, type: 3}
+    Species: Spider
+    Description: A slightly bigger red spider, these are usually only found in forest
+      areas. Be careful, when there's a red spider, there's a huge Queen nearby!
+  - ID: 7
+    MonPrefab: {fileID: 9043372740616889128, guid: 8bc2b6bfafd7c0a47a909349d7f3fba8,
+      type: 3}
+    MonsterSpriteRight: {fileID: 21300000, guid: af358b171e22b7f4dac23f1b4cd13278,
+      type: 3}
+    MonsterSpriteLeft: {fileID: 21300000, guid: 92abc0d6fc67e904087a6e6b8e55331a,
+      type: 3}
+    AttackBaseStat: 2
+    DefenceBaseStat: 2
+    SpeedBaseStat: 1
+    HPBaseStat: 200
+    MyElement: 0
+    AttackTree: 070000000800000002000000
+    TakeDamageSound: {fileID: 8300000, guid: 3167200b9379a594c85d34daf1ab4937, type: 3}
+    DeathSound: {fileID: 8300000, guid: f18aea4317addb8409fcc3b2c79e8b76, type: 3}
+    WalkSound: {fileID: 8300000, guid: efa7cf669548cbf4a9d000c3c5bef47e, type: 3}
+    Species: Spider
+    Description: The rare Queen spider, these are very rare and usually accompanied
+      by body guards. They will defend their palace from any intruder!

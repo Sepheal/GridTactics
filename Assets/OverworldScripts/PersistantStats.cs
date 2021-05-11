@@ -30,6 +30,9 @@ public class PersistantStats : MonoBehaviour
     public int[] HeroCloths;
     public Sprite HeroImage;
 
+    //Monster Dex
+    public int[] MonsterDex;
+
     private void Awake()
     {
         if (instance == null)

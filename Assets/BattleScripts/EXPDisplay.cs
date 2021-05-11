@@ -55,20 +55,24 @@ public class EXPDisplay : MonoBehaviour
     void CalculateEXP()
     {
         int unitcounter = 1;
-        string Texto = "";
+        string Texto;
         foreach (UnitListing unit in UnitList)
         {
-            Texto = "Lv. " + unit.MyLevel;
+            
             unit.Exp += 70;
             if (unit.Exp >= 100)
             {
                 unit.Exp -= 100;
                 unit.MyLevel++;
-                Texto += "  (Lvl up!)";
+                Texto = "Lv. " + unit.MyLevel + "  (Lvl up!)";
                 UnitBoxs[unitcounter].transform.Find("Bar").Find("Image").Find("Anim").GetComponent<Image>().color = new Color(255, 255, 0);
             }
+            else
+            {
+                Texto = "Lv. " + unit.MyLevel;
+            }
             UnitBoxs[unitcounter].SetActive(true);
-            UnitBoxs[unitcounter].transform.Find("Prof").GetComponent<Image>().sprite = MD.MonsterSpritesRight[unit.MonsterId];
+            UnitBoxs[unitcounter].transform.Find("Prof").GetComponent<Image>().sprite = MD.Monsters[unit.MonsterId].MonsterSpriteRight; //MD.MonsterSpritesRight[unit.MonsterId];
             UnitBoxs[unitcounter].transform.Find("Text").GetComponent<Text>().text = Texto;
             UnitBoxs[unitcounter].transform.Find("Bar").GetComponent<Scrollbar>().size = unit.Exp / 100.0f;
             unitcounter++;

@@ -80,7 +80,9 @@
     <Compile Include="Assets\BattleScripts\DialogueInBattle.cs" />
     <Compile Include="Assets\OverworldScripts\HeroDictionary.cs" />
     <Compile Include="Assets\OverworldScripts\BattleEffect.cs" />
-    <Compile Include="Assets\Prefabs\AttackDictionary.cs" />
+    <Compile Include="Assets\OverworldScripts\OverworldMenu.cs" />
+    <Compile Include="Assets\BattleScripts\AttackDictionary.cs" />
+    <Compile Include="Assets\OverworldScripts\UnitChangeScript.cs" />
     <Compile Include="Assets\BattleScripts\PlayerMovement.cs" />
     <Compile Include="Assets\OverworldScripts\CostumeIDs.cs" />
     <Compile Include="Assets\ImportedAssets\ModularRPGHeroesPolyArt\TPController\Scripts\ResetTimer.cs" />

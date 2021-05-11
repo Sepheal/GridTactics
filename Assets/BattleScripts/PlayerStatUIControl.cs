@@ -12,6 +12,7 @@ public class PlayerStatUIControl : MonoBehaviour
     public GameObject HPFront, HPFront2, HPDiff2;
     public Sprite[] MonsterSpritesRight;
     public Sprite[] MonsterSpritesLeft;
+    public List<Monster> MonsterList;
     public GameObject DamageHolder;
     public GameObject[] DamageBoxs;
 
@@ -34,7 +35,7 @@ public class PlayerStatUIControl : MonoBehaviour
             {
                 Prof.enabled = true;
                 TextureImage.enabled = false;
-                Prof.sprite = MonsterSpritesRight[Unit.MonsterId];
+                Prof.sprite = MonsterList[Unit.MonsterId].MonsterSpriteRight; //MonsterSpritesRight[Unit.MonsterId];
             }
             else
             {
@@ -55,7 +56,7 @@ public class PlayerStatUIControl : MonoBehaviour
             ParentBox = StatUIParent2;
             UnHealthText = UnitHealthText2;
             Prof = ProfileImage2;
-            Prof.sprite = MonsterSpritesLeft[Unit.MonsterId];
+            Prof.sprite = MonsterList[Unit.MonsterId].MonsterSpriteLeft; //MonsterSpritesLeft[Unit.MonsterId];
             StatUIParent2.SetActive(true);
         }
         object[] Stats = Unit.GetStats();
@@ -183,7 +184,7 @@ public class PlayerStatUIControl : MonoBehaviour
         HPF.GetComponent<RectTransform>().sizeDelta = new Vector2(PercentLeft * BarSize, 1);
         HPD.GetComponent<RectTransform>().sizeDelta = new Vector2(Diff * BarSize, 1);
 
-        if (unit.MonsterId != 2) PImage.sprite = MonsterSpritesLeft[unit.MonsterId];
+        if (unit.MonsterId != 2) PImage.sprite = MonsterList[unit.MonsterId].MonsterSpriteLeft; //MonsterSpritesLeft[unit.MonsterId];
         else PImage.sprite = FindObjectOfType<PersistantStats>().HeroImage;
 
         float XPos = HPF.GetComponent<RectTransform>().localPosition.x - HPF.GetComponent<RectTransform>().sizeDelta.x;

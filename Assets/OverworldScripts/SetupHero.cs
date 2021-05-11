@@ -89,9 +89,7 @@ public class SetupHero : MonoBehaviour
             PM.Exp = PS.PlayerExp;
 
             PM.MyElement = PS.PElement;
-            //PM.AttackIDs = PS.PAttacks;
-            AttackDictionary AD = FindObjectOfType<AttackDictionary>();
-            PM.AttackIDs = AD.GetAttacks(2, PM.Level);
+            PM.AttackIDs = FindObjectOfType<MonsterDictionary>().GetAttacks(2, PM.Level);
 
             //Audio files
             PM.TakeDamageSound = Dictionary.TakeDamageSound;

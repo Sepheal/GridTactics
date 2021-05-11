@@ -1479,11 +1479,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsActive: 1
+  IsInMenu: 0
   MyCharacter: {fileID: 0}
   RotHolder: {fileID: 409054821}
   WalkCheck: {fileID: 386568146}
   SpawnHolder: {fileID: 1199645746}
   StartingPosition: {fileID: 796166726}
+  overworldMenu: {fileID: 0}
 --- !u!4 &271639627
 Transform:
   m_ObjectHideFlags: 0
@@ -5452,6 +5454,7 @@ MonoBehaviour:
   HeroId: 0
   HeroCloths: 0000000000000000000000000000000000000000000000000000000000000000
   HeroImage: {fileID: 0}
+  MonsterDex: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!4 &1161305629
 Transform:
   m_ObjectHideFlags: 0
@@ -5748,8 +5751,7 @@ MonoBehaviour:
   Exp: 0
   StartingTile: {fileID: 0}
   MyName: Slime
-  MyElement: 2
-  AttackList: 0100000003000000
+  PassiveLevel: 1
   Placed: 0
   MyBody: {fileID: 0}
 --- !u!1001 &1272150073

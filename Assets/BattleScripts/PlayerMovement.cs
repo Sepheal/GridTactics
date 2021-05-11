@@ -149,7 +149,6 @@ public class PlayerMovement : UnitMovement
 
     public void ActivateArrowAnim(Vector2 Dir)
     {
-        print(Dir);
         switch (Dir.x)
         {
             case 1:
