@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//camera control for in battle
+
 public class CameraControl : MonoBehaviour
 {
     public Vector3 TargetPos = new Vector3(0, 0, 0), StartTranPos, CurrentPos = new Vector3(0, 0, 0);

@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-//using System.Numerics;
 using UnityEngine;
 using UnityEngine.UI;
+
+//Health Animation handling script
 
 public class HealthAnimScript : MonoBehaviour
 {
@@ -10,12 +11,6 @@ public class HealthAnimScript : MonoBehaviour
     bool Draining = false, EndDelay = false;
     float DrainStartTime, DrainTimeLength = 1.0f, EndDelayTime, EndDelayLength = 0.5f;
     float CurrentPercent = 1.0f, LastPercent = 1.0f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-//using UnityEngine.UIElements;
+
+//Inherited version of the unitmovement for player units, also handles the player UIs each unit has a copy off (like attack direction)
 
 public class PlayerMovement : UnitMovement
 {

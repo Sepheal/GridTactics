@@ -23,4 +23,9 @@ public class TitleScreenControl : MonoBehaviour
         GetComponent<AudioSource>().Play();
         SceneManager.LoadScene("SelectHeroScreen");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

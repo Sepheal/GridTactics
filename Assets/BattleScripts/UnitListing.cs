@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Unit listing struct for holding unit values between fights
+
 public class UnitListing : MonoBehaviour
 {
     public Owner Controller;

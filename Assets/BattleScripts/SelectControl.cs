@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+
+//Movement for the selector diamond in battle, also handles the player selections and highlighting of units
 
 public class SelectControl : MonoBehaviour
 {

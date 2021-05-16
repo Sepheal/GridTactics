@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-//using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
+
+//Inherited version of the unitmovement for enemies, also contains the AI logic for in battle
 
 class AttackInstruction
 {

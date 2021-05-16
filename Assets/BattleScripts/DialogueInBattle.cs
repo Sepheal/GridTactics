@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//dialogue control for in battle
+
 public class DialogueInBattle : MonoBehaviour
 {
     bool Active = false;
@@ -16,12 +18,6 @@ public class DialogueInBattle : MonoBehaviour
     public Animator PlayerAnimator;
 
     public AudioClip ConfirmAudio, ConfirmAudio2, ChangeAudio;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()

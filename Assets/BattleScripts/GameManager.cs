@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//Game manager for in battle, controls the setup, battle phases and turns in the game as well as spawning units
+
 public enum Element { Neutral, Rock, Paper, Scissors, Pencil};
 public enum Owner { Player, Enemy };
 public enum UnitState { Ready, Moving, Attacking, Done, DecidingAttack, DecidingMove, DecidingAction, Passive };

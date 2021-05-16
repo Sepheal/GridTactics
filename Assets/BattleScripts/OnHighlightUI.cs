@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//Used for showing the highlight animation in menus, needs reworking for controller
+
 public class OnHighlightUI : MonoBehaviour, IPointerEnterHandler
 {
     public int MyId = 0;

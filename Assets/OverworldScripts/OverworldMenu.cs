@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class OverworldMenu : MonoBehaviour
 {
@@ -111,12 +112,6 @@ public class OverworldMenu : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UnitsClicked()
     {
         UnitMenu.SetActive(true);
@@ -136,5 +131,10 @@ public class OverworldMenu : MonoBehaviour
         UnitMenu.SetActive(false);
         DexMenu.SetActive(false);
         OptionsMenu.SetActive(true);
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("TitleScreen");
     }
 }

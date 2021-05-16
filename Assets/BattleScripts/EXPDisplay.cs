@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Exp Displays control for ingame, needs work
+
 public class EXPDisplay : MonoBehaviour
 {
     public GameObject[] UnitBoxs;
@@ -11,18 +13,6 @@ public class EXPDisplay : MonoBehaviour
     public Texture CamTexture;
 
     public List<UnitListing> UnitList;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Setup(List<UnitListing> Units, MonsterDictionary md, PersistantStats ps)
     {

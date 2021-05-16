@@ -3,19 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
+//cinematic controller in battle
+
 public class CinematicControl : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Activate()
     {
@@ -30,26 +21,7 @@ public class CinematicControl : MonoBehaviour
         }
         GetComponent<PlayableDirector>().Play();
 
-        yield return new WaitForSeconds(2);
-
-        /*
-
-        bool HasUnits = false;
-        foreach (UnitListing unit in FindObjectsOfType<UnitListing>())
-        {
-            if (unit.Controller == Owner.Player)
-            {
-                HasUnits = true;
-                break;
-            }
-        }
-        if (HasUnits) StartCoroutine(FindObjectOfType<GameManager>().PlayTitle());
-        else
-        {
-            FindObjectOfType<SelectControl>().Activate();
-            FindObjectOfType<CameraControl>().IsPlayerTurn = true;
-            FindObjectOfType<GameManager>().ChangeTurn();
-        }*/
+        yield return new WaitForSeconds(5);
 
         FindObjectOfType<GameManager>().DecideStart();
     }

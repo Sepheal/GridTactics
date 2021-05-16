@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Base unitmovement script for all battle units, gets branched into PlayerMovement and EnemyMovements based on the owner, handles all unit actions and states
+
 public class UnitMovement : MonoBehaviour
 {
     public Tile PositionTile, DestinationTile, StartTurnTile, TargetTile;

@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+
+//Map control for in battle, handles all logic regarding the grid and has several public functions that handle the pathfinding ai and returns lists for movement, attack ranges and all attacks
 
 class Checkpoint
 {

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Monster dictionary with struct
+
 [System.Serializable]
 public struct Monster
 {

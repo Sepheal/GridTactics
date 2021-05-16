@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Tile script, used enmass, all controlled by the Map control
+
 public class Tile : MonoBehaviour
 {
     public Vector2 Position;

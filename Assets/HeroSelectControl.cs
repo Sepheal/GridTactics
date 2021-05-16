@@ -31,6 +31,8 @@ public class HeroSelectControl : MonoBehaviour
     public AudioClip ConfirmAudio, ConfirmAudio2, ChangeAudio;
     AudioSource Audio;
 
+    public GameObject[] LimeBackdrops;
+
     // Start is called before the first frame update
     void Start()
     {

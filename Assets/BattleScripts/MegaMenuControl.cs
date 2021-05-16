@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Game menu in battle control, needs work
+
 public class MegaMenuControl : MonoBehaviour
 {
     public bool Active = false;
@@ -12,12 +14,6 @@ public class MegaMenuControl : MonoBehaviour
     int OptionSelected = 0;
     bool FrameBuffer = false;
     float CooldownStart; readonly float FrameCooldown = 0.2f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

@@ -68,6 +68,7 @@
     <Compile Include="Assets\BattleScripts\CameraControl.cs" />
     <Compile Include="Assets\OverworldScripts\PersistantStats.cs" />
     <Compile Include="Assets\BattleScripts\GameManager.cs" />
+    <Compile Include="Assets\OverworldScripts\ObjectPlacement.cs" />
     <Compile Include="Assets\BattleScripts\Tile.cs" />
     <Compile Include="Assets\BattleScripts\HealthAnimScript.cs" />
     <Compile Include="Assets\BattleScripts\EXPDisplay.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\OverworldScripts\TextureSetters.cs" />
     <Compile Include="Assets\OverworldScripts\SceneJump.cs" />
     <Compile Include="Assets\ImportedAssets\ModularRPGHeroesPolyArt\TPController\Scripts\BoolOperator1.cs" />
+    <Compile Include="Assets\OverworldScripts\CinematicStart.cs" />
     <Compile Include="Assets\BattleScripts\EnemyMovement.cs" />
     <Compile Include="Assets\ImportedAssets\ModularRPGHeroesPolyArt\TPController\Scripts\CameraManager.cs" />
     <Compile Include="Assets\BattleScripts\SelectControl.cs" />

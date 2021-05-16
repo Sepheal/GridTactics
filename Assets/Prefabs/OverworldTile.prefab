@@ -123,3 +123,4 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 4be9ca9188c2e124a8c00d2d92b747d0, type: 3}
   - {fileID: 21300000, guid: 319266ad31e29a4488db2c20ff906224, type: 3}
   StartingTileId: 0
+  OverworldActive: 1

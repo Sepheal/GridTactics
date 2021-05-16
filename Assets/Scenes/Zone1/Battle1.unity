@@ -2619,7 +2619,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1340378696}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: 0afea92e65fafb34abbaadc0affc5c43, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: 462b92b839f1cbe47b861840fed171fc, type: 2}
   m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -2629,6 +2629,12 @@ PlayableDirector:
     value: {fileID: 2075833517}
   - key: {fileID: 3672873642643700823, guid: 0afea92e65fafb34abbaadc0affc5c43, type: 2}
     value: {fileID: 2075833517}
+  - key: {fileID: 1446878737531114255, guid: 0afea92e65fafb34abbaadc0affc5c43, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3672873642643700823, guid: 462b92b839f1cbe47b861840fed171fc, type: 2}
+    value: {fileID: 2075833517}
+  - key: {fileID: 1446878737531114255, guid: 462b92b839f1cbe47b861840fed171fc, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1340378699
@@ -11879,7 +11885,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh148804
+  m_Name: pb_Mesh91194
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

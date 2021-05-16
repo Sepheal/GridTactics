@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
+
+//UI control for the unit placement phase of battle, shows list of units you could place
 
 public class UnitSelection : MonoBehaviour
 {
@@ -20,12 +21,6 @@ public class UnitSelection : MonoBehaviour
     bool ConfirmScreen = false;
 
     public AudioClip ConfirmAudio, ConfirmAudio2, ChangeAudio, CancelAudio;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

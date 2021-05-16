@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//UI battle preview script
+
 public class PlayerStatUIControl : MonoBehaviour
 {
     public GameObject StatUIParent, StatUIParent2;
